@@ -1,0 +1,75 @@
+'.text.tex':
+  'answer':
+    'prefix': 'answer'
+    'body': """
+      \\\\begin{answer}[name={[\\\\Cref{prob:$1}]\\\\Vref{prob:$1}}]\\\\label{ans:$1}
+        $2
+      \\\\end{answer}
+    """
+  'carbon':
+    'prefix': 'carbon'
+    'body': '\\\\ce{C}-\\\\($1\\\\)$2'
+  'reaction':
+    'prefix': 'rxn'
+    'body': """
+      \\\\prerxn
+      \\\\hfil \\\\schemestart
+        $1
+      \\\\schemestop \\\\hfil
+    """
+  'chemname':
+    'prefix': 'chemname'
+    'body': '\\\\chemname{${1:\\\\chemfig{$2}}}{$3}'
+  'frame':
+    'prefix': 'framegood'
+    'body': """
+      \\\\begin{frame}[<+-| alert@+>]{$1}
+        \\\\begin{itemize}
+          \\\\item $2
+        \\\\end{itemize}
+      \\\\end{frame}
+    """
+  'document':
+    'prefix': 'document'
+    'body': """
+      \\\\documentclass[$1]{$2}
+
+      \\\\usepackage[utf8]{inputenc}
+      \\\\usepackage[english]{babel}
+
+      \\\\begin{document}
+        $3
+      \\\\end{document}
+    """
+  'subfile':
+    'prefix': 'subfile'
+    'body': """
+      \\\\documentclass[${1:../main.tex}]{subfiles}
+      \\\\begin{document}
+        $2
+      \\\\end{document}
+    """
+  'tikz':
+    'prefix': 'tikz'
+    'body': """
+      \\\\begin{figure}
+        \\\\centerfloat
+        \\\\begin{tikzpicture}
+          ${3:\\\\draw[step=1, style=help lines] (-1,-1) grid (1,1);}
+        \\\\end{tikzpicture}
+        \\\\caption{$1}
+        \\\\label{fig:$2}
+      \\\\end{figure}
+    """
+  'problem':
+    'prefix': 'problem'
+    'body': """
+      \\\\begin{problem}\\\\label{prob:$1}
+        $4
+
+        \\\\emph{Answer${3:s} \\\\vpageref{ans:$1}}
+      \\\\end{problem}
+    """
+  'inline display math':
+    'prefix': 'displayinline'
+    'body': '\\\\(\\\\displaystyle $1\\\\)'
