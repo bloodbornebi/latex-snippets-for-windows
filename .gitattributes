@@ -1,2 +1,3 @@
 *.cson linguist-detectable
-atom-tools/* linguist-dectable
+atom-tools/atomsnippets.cson linguist-detectable
+atom-tools/keymap.cson linguist-detectable
