@@ -29,7 +29,7 @@ return
 #IfWinActive ahk_exe inkscape.exe
 !s::
   Send ^s
-  RunWait, Powershell ".\inkscape --export-type=pdf --export-latex %FullName%", C:\Program Files\Inkscape\bin
+  RunWait, Powershell ".\inkscape --export-overwrite --export-type=pdf --export-latex %FullName%", C:\Program Files\Inkscape\bin
   WinClose
   WinActivate, ahk_exe atom.exe
   Send ^s
