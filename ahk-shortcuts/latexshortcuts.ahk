@@ -71,7 +71,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
       Send {backspace}{right}
     }
 	::]not::\not
-	::]in::\in
+	::]in::\in ; small
 	::]set::
 		set() {
 			Send \bqty{{}{}}{left}
